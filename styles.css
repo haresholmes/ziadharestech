@@ -1455,6 +1455,12 @@ main {
     color: #000000;
 }
 
+.security-badge.success {
+    background: #00ff88;
+    color: #000000;
+    animation: pulse 2s infinite;
+}
+
 .tech-badge {
     background: #0088ff;
     color: #ffffff;
