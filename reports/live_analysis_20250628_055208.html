@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Analysis Report - Ziad Hares Tech</title>
+    <style>
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: #0a0a0a;
+            color: #00ff00;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #00ff00;
+            padding-bottom: 20px;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .project-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+        }
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #00ff00, #0080ff);
+        }
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #00ff00;
+        }
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        .status-good { color: #00ff00; }
+        .status-error { color: #ff0000; }
+        .status-warning { color: #ffff00; }
+        .timestamp {
+            text-align: center;
+            color: #666;
+            font-size: 0.8rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>LIVE ANALYSIS REPORT</h1>
+            <p>Ziad Hares Tech - Technical Portfolio</p>
+            <p>Generated: <span id="timestamp"></span></p>
+        </div>
+        
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-title">AMALAK.AE</div>
+                <div class="metric">
+                    <span>Status:</span>
+                    <span class="status-good">✓ ACCESSIBLE</span>
+                </div>
+                <div class="metric">
+                    <span>Response Time:</span>
+                    <span>0.042s</span>
+                </div>
+                <div class="metric">
+                    <span>HTTP Status:</span>
+                    <span>301</span>
+                </div>
+                <div class="metric">
+                    <span>SSL/TLS:</span>
+                    <span class="status-good">✓ SECURE</span>
+                </div>
+                <div class="metric">
+                    <span>Performance:</span>
+                    <span>85/100</span>
+                </div>
+                <div class="metric">
+                    <span>Security Score:</span>
+                    <span class="status-warning">2/4</span>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-title">BETTERCALLRAMADAN.COM</div>
+                <div class="metric">
+                    <span>Status:</span>
+                    <span class="status-error">✗ INACCESSIBLE</span>
+                </div>
+                <div class="metric">
+                    <span>Response Time:</span>
+                    <span>N/A</span>
+                </div>
+                <div class="metric">
+                    <span>HTTP Status:</span>
+                    <span>N/A</span>
+                </div>
+                <div class="metric">
+                    <span>SSL/TLS:</span>
+                    <span>N/A</span>
+                </div>
+                <div class="metric">
+                    <span>Performance:</span>
+                    <span>N/A</span>
+                </div>
+                <div class="metric">
+                    <span>Security Score:</span>
+                    <span>N/A</span>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-title">HARESHOLMES.EU.ORG</div>
+                <div class="metric">
+                    <span>Status:</span>
+                    <span class="status-good">✓ ACCESSIBLE</span>
+                </div>
+                <div class="metric">
+                    <span>Response Time:</span>
+                    <span>0.040s</span>
+                </div>
+                <div class="metric">
+                    <span>HTTP Status:</span>
+                    <span>200</span>
+                </div>
+                <div class="metric">
+                    <span>SSL/TLS:</span>
+                    <span class="status-good">✓ SECURE</span>
+                </div>
+                <div class="metric">
+                    <span>Performance:</span>
+                    <span>92/100</span>
+                </div>
+                <div class="metric">
+                    <span>Security Score:</span>
+                    <span class="status-warning">3/4</span>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-title">THEPIRATESDXB.SOFTWARE</div>
+                <div class="metric">
+                    <span>Status:</span>
+                    <span class="status-error">✗ INACCESSIBLE</span>
+                </div>
+                <div class="metric">
+                    <span>Response Time:</span>
+                    <span>N/A</span>
+                </div>
+                <div class="metric">
+                    <span>HTTP Status:</span>
+                    <span>N/A</span>
+                </div>
+                <div class="metric">
+                    <span>SSL/TLS:</span>
+                    <span>N/A</span>
+                </div>
+                <div class="metric">
+                    <span>Performance:</span>
+                    <span>N/A</span>
+                </div>
+                <div class="metric">
+                    <span>Security Score:</span>
+                    <span>N/A</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="timestamp">
+            <p>Analysis completed at: <span id="completion-time"></span></p>
+            <p>Next scheduled analysis: <span id="next-analysis"></span></p>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+        document.getElementById('completion-time').textContent = new Date().toLocaleString();
+        
+        // Set next analysis time (24 hours from now)
+        const nextAnalysis = new Date();
+        nextAnalysis.setHours(nextAnalysis.getHours() + 24);
+        document.getElementById('next-analysis').textContent = nextAnalysis.toLocaleString();
+    </script>
+</body>
+</html>

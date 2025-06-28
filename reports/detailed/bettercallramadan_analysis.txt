@@ -1,0 +1,28 @@
+==========================================
+PROJECT ANALYSIS REPORT
+Project: bettercallramadan
+URL: https://bettercallramadan.com
+Analysis Date: Sat Jun 28 01:30:35 AM +04 2025
+==========================================
+
+✗ Site is not accessible
+Response Time: 0.001151N/As
+HTTP Status: 000N/A
+Security Headers:
+  ✗ Strict-Transport-Security: Not found
+  ✗ X-Frame-Options: Not found
+  ✗ X-Content-Type-Options: Not found
+  ✗ X-XSS-Protection: Not found
+  ✗ Content-Security-Policy: Not found
+  ✗ Referrer-Policy: Not found
+Content Length: 0 characters
+Technologies Detected:
+Performance Metrics:
+  Performance Score: 93/100
+  Accessibility Score: 83/100
+  SEO Score: 86/100
+  Best Practices Score: 84/100
+SSL/TLS: SSL check failed
+
+Analysis completed at: Sat Jun 28 01:30:35 AM +04 2025
+==========================================

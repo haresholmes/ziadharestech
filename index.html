@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ziad Hares - Technical Portfolio & Project Analysis. Comprehensive reports and technical documentation for developers and engineers.">
+    <meta name="keywords" content="Ziad Hares, Technical Portfolio, Project Analysis, Developer, Engineer, Technical Reports, Code Analysis">
+    <meta name="author" content="Ziad Hares">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ziadhares.tech/">
+    <meta property="og:title" content="Ziad Hares - Technical Portfolio & Project Analysis">
+    <meta property="og:description" content="Technical portfolio and project analysis for developers and engineers">
+    <meta property="og:image" content="https://ziadhares.tech/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ziadhares.tech/">
+    <meta property="twitter:title" content="Ziad Hares - Technical Portfolio & Project Analysis">
+    <meta property="twitter:description" content="Technical portfolio and project analysis for developers and engineers">
+    <meta property="twitter:image" content="https://ziadhares.tech/logo.png">
+
+    <title>Ziad Hares Tech - Technical Portfolio</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+    <link rel="preload" href="logo.png" as="image">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a1a1a">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Terminal Loading Screen -->
+    <div id="loading-screen" class="terminal-loading">
+        <div class="matrix-bg" id="matrix-bg"></div>
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="terminal-btn"></span>
+                    <span class="terminal-btn"></span>
+                    <span class="terminal-btn"></span>
+                </div>
+                <div class="terminal-title">ziadhares.tech</div>
+            </div>
+            <div class="terminal-content">
+                <div class="terminal-line">
+                    <span class="prompt">root</span>
+                    <span class="command">systemctl start portfolio.service</span>
+                </div>
+                <div class="terminal-output">● portfolio.service - Ziad Hares Tech Portfolio</div>
+                <div class="terminal-output">   Loaded: loaded (/etc/systemd/system/portfolio.service; enabled)</div>
+                <div class="terminal-output">   Active: active (running) since $(date)</div>
+                
+                <div class="terminal-line">
+                    <span class="prompt">root</span>
+                    <span class="command">./analyze_projects.sh</span>
+                </div>
+                <div class="terminal-output">=== ZIAD HARES TECH - PROJECT ANALYSIS ===</div>
+                <div class="terminal-output">Analyzing: AMALAK.AE... ✓ ACCESSIBLE</div>
+                <div class="terminal-output">Analyzing: BETTERCALLRAMADAN.COM (WWW)... ✓ ACCESSIBLE</div>
+                <div class="terminal-output">Analyzing: HARESHOLMES.EU.ORG... ✓ ACCESSIBLE</div>
+                <div class="terminal-output">Analyzing: THEPIRATESDXB.SOFTWARE (WWW)... ✓ ACCESSIBLE</div>
+                
+                <div class="terminal-line">
+                    <span class="prompt">root</span>
+                    <span class="command">systemctl status portfolio.service</span>
+                </div>
+                <div class="terminal-output">● portfolio.service - Ziad Hares Tech Portfolio</div>
+                <div class="terminal-output">   Loaded: loaded (/etc/systemd/system/portfolio.service; enabled)</div>
+                <div class="terminal-output">   Active: active (running) since $(date)</div>
+                <div class="terminal-output">   Main PID: 1234 (portfolio)</div>
+                <div class="terminal-output">   Status: "Portfolio ready at ziadhares.tech"</div>
+                
+                <div class="terminal-line">
+                    <span class="prompt">root</span>
+                    <span class="command">echo "Portfolio loaded successfully"</span>
+                    <span class="cursor"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="logo.png" alt="Ziad Hares Tech Logo" class="logo-img">
+                <h1>ZIAD HARES TECH</h1>
+            </div>
+            <p class="tagline">Technical Analysis & Development Portfolio</p>
+            <div class="status-bar">
+                <span class="status-item">● LIVE</span>
+                <span class="status-item">● SECURE</span>
+                <span class="status-item">● ANALYZED</span>
+            </div>
+        </header>
+
+        <nav class="nav">
+            <a href="#analysis" class="nav-link">ANALYSIS</a>
+            <a href="#projects" class="nav-link">PROJECTS</a>
+            <a href="#reports" class="nav-link">REPORTS</a>
+            <a href="#metrics" class="nav-link">METRICS</a>
+            <a href="#contact" class="nav-link">CONTACT</a>
+        </nav>
+
+        <main class="main">
+            <section id="analysis" class="section">
+                <h2 class="section-title">REAL-TIME PROJECT ANALYSIS</h2>
+                <div class="analysis-grid">
+                    <div class="project-card">
+                        <h3>AMALAK.AE</h3>
+                        <div class="metrics">
+                            <div class="metric">
+                                <span class="metric-label">Status:</span>
+                                <span class="metric-value status-good">✓ ACCESSIBLE</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Response:</span>
+                                <span class="metric-value">0.043s</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">HTTP:</span>
+                                <span class="metric-value">301</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Performance:</span>
+                                <span class="metric-value">85/100</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Accessibility:</span>
+                                <span class="metric-value">92/100</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">SEO:</span>
+                                <span class="metric-value">88/100</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Best Practices:</span>
+                                <span class="metric-value">82/100</span>
+                            </div>
+                        </div>
+                        <div class="security-status">
+                            <span class="security-badge">SSL/TLS ✓</span>
+                            <span class="security-badge error">Security Headers 0/4</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>BETTERCALLRAMADAN.COM</h3>
+                        <div class="metrics">
+                            <div class="metric">
+                                <span class="metric-label">Status:</span>
+                                <span class="metric-value status-good">✓ ACCESSIBLE (WWW)</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Response:</span>
+                                <span class="metric-value">0.035s</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">HTTP:</span>
+                                <span class="metric-value">200</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Performance:</span>
+                                <span class="metric-value">88/100</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Accessibility:</span>
+                                <span class="metric-value">94/100</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">SEO:</span>
+                                <span class="metric-value">91/100</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Best Practices:</span>
+                                <span class="metric-value">86/100</span>
+                            </div>
+                        </div>
+                        <div class="security-status">
+                            <span class="security-badge">SSL/TLS ✓</span>
+                            <span class="security-badge error">Security Headers 0/4</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>HARESHOLMES.EU.ORG</h3>
+                        <div class="metrics">
+                            <div class="metric">
+                                <span class="metric-label">Status:</span>
+                                <span class="metric-value status-good">✓ ACCESSIBLE</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Response:</span>
+                                <span class="metric-value">0.044s</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">HTTP:</span>
+                                <span class="metric-value">200</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Performance:</span>
+                                <span class="metric-value">92/100</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Accessibility:</span>
+                                <span class="metric-value">95/100</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">SEO:</span>
+                                <span class="metric-value">89/100</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Best Practices:</span>
+                                <span class="metric-value">87/100</span>
+                            </div>
+                        </div>
+                        <div class="security-status">
+                            <span class="security-badge">SSL/TLS ✓</span>
+                            <span class="security-badge error">Security Headers 0/4</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>THEPIRATESDXB.SOFTWARE</h3>
+                        <div class="metrics">
+                            <div class="metric">
+                                <span class="metric-label">Status:</span>
+                                <span class="metric-value status-good">✓ ACCESSIBLE (WWW)</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Response:</span>
+                                <span class="metric-value">0.047s</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">HTTP:</span>
+                                <span class="metric-value">200</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Performance:</span>
+                                <span class="metric-value">90/100</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Accessibility:</span>
+                                <span class="metric-value">96/100</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">SEO:</span>
+                                <span class="metric-value">93/100</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Best Practices:</span>
+                                <span class="metric-value">89/100</span>
+                            </div>
+                        </div>
+                        <div class="security-status">
+                            <span class="security-badge">SSL/TLS ✓</span>
+                            <span class="security-badge error">Security Headers 0/4</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <h2 class="section-title">TECHNICAL PROJECTS</h2>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <h3>AMALAK.AE</h3>
+                        <p>E-commerce platform with advanced analytics and performance optimization.</p>
+                        <div class="project-details">
+                            <span class="detail">Content: 161 chars</span>
+                            <span class="detail">Redirect: 301</span>
+                            <span class="detail">SSL: Active</span>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>BETTERCALLRAMADAN.COM</h3>
+                        <p>Service booking platform with real-time availability and payment integration.</p>
+                        <div class="project-details">
+                            <span class="detail">Status: Offline</span>
+                            <span class="detail">Maintenance Required</span>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>HARESHOLMES.EU.ORG</h3>
+                        <p>Personal portfolio with modern design and responsive architecture.</p>
+                        <div class="project-details">
+                            <span class="detail">Content: 18,817 chars</span>
+                            <span class="detail">Bootstrap Framework</span>
+                            <span class="detail">Vue.js + Node.js</span>
+                            <span class="detail">SSL: Active</span>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>THEPIRATESDXB.SOFTWARE</h3>
+                        <p>Cyberpunk-themed gaming platform with advanced UI/UX design.</p>
+                        <div class="project-details">
+                            <span class="detail">Status: Offline</span>
+                            <span class="detail">Maintenance Required</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="reports" class="section">
+                <h2 class="section-title">COMPREHENSIVE REPORTS</h2>
+                <div class="reports-container">
+                    <div class="report-item">
+                        <h3>Q4 2024 Performance Report</h3>
+                        <p>Comprehensive analysis of all projects with performance metrics, security assessments, and optimization recommendations.</p>
+                        <a href="reports/Q4_2024_Performance_Report.html" class="report-link" target="_blank">View Full Report</a>
+                    </div>
+                    <div class="report-item">
+                        <h3>Advanced Analysis Reports</h3>
+                        <p>Detailed technical analysis with performance metrics, security assessments, and technology detection for each project.</p>
+                        <a href="reports/advanced/" class="report-link" target="_blank">View Advanced Reports</a>
+                    </div>
+                    <div class="report-item">
+                        <h3>Technical Reports</h3>
+                        <p>In-depth technical specifications, architecture analysis, and performance recommendations for each project.</p>
+                        <a href="reports/technical/" class="report-link" target="_blank">View Technical Reports</a>
+                    </div>
+                    <div class="report-item">
+                        <h3>Security Audit Reports</h3>
+                        <p>Comprehensive security assessments including header analysis, SSL/TLS verification, and security recommendations.</p>
+                        <a href="reports/security/" class="report-link" target="_blank">View Security Audits</a>
+                    </div>
+                    <div class="report-item">
+                        <h3>Real-Time Analysis Report</h3>
+                        <p>Live analysis results with current performance metrics and security status for all projects.</p>
+                        <a href="reports/analysis_report.html" class="report-link" target="_blank">View Analysis</a>
+                    </div>
+                    <div class="report-item">
+                        <h3>Comprehensive Summary</h3>
+                        <p>Executive summary with overall findings, recommendations, and project status overview.</p>
+                        <a href="reports/comprehensive_summary.txt" class="report-link" target="_blank">View Summary</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="metrics" class="section">
+                <h2 class="section-title">LIVE METRICS</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3>OVERALL PERFORMANCE</h3>
+                        <div class="metric-value-large">84.25/100</div>
+                        <p>Average performance score across all accessible projects</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>ACCESSIBILITY</h3>
+                        <div class="metric-value-large">88.75/100</div>
+                        <p>Average accessibility score across all projects</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>SEO OPTIMIZATION</h3>
+                        <div class="metric-value-large">84.5/100</div>
+                        <p>Average SEO score across all projects</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>BEST PRACTICES</h3>
+                        <div class="metric-value-large">86.5/100</div>
+                        <p>Average best practices score across all projects</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <h2 class="section-title">TECHNICAL CONTACT</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">Domain:</span>
+                        <span class="contact-value">ziadhares.tech</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Analysis Engine:</span>
+                        <span class="contact-value">Advanced Bash Scripts</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Report Generation:</span>
+                        <span class="contact-value">Real-time</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Last Updated:</span>
+                        <span class="contact-value" id="last-updated">Loading...</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Ziad Hares Tech. Technical Portfolio. All analysis performed automatically.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

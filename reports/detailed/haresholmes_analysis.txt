@@ -1,0 +1,30 @@
+==========================================
+PROJECT ANALYSIS REPORT
+Project: haresholmes
+URL: https://haresholmes.eu.org
+Analysis Date: Sat Jun 28 01:30:35 AM +04 2025
+==========================================
+
+✓ Site is accessible
+Response Time: 0.040411s
+HTTP Status: 200
+Security Headers:
+  ✗ Strict-Transport-Security: Not found
+  ✗ X-Frame-Options: Not found
+  ✗ X-Content-Type-Options: Not found
+  ✗ X-XSS-Protection: Not found
+  ✗ Content-Security-Policy: Not found
+  ✗ Referrer-Policy: Not found
+Content Length: 18817 characters
+Technologies Detected:
+  ✓ Bootstrap
+Performance Metrics:
+  Performance Score: 81/100
+  Accessibility Score: 84/100
+  SEO Score: 94/100
+  Best Practices Score: 84/100
+SSL/TLS: notBefore=Jun 23 05:28:29 2025 GMT
+notAfter=Sep 21 05:28:28 2025 GMT
+
+Analysis completed at: Sat Jun 28 01:30:36 AM +04 2025
+==========================================

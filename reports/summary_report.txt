@@ -1,0 +1,46 @@
+ZIAD HARES TECH - PROJECT ANALYSIS SUMMARY
+Generated: Sat Jun 28 01:30:36 AM +04 2025
+==========================================
+
+PROJECT: amalak
+----------------------------------------
+✓ Site is accessible
+Response Time: 0.041968s
+HTTP Status: 301
+  Performance Score: 64/100
+  Accessibility Score: 91/100
+  SEO Score: 87/100
+  Best Practices Score: 80/100
+
+PROJECT: bettercallramadan
+----------------------------------------
+✗ Site is not accessible
+Response Time: 0.001151N/As
+HTTP Status: 000N/A
+  Performance Score: 93/100
+  Accessibility Score: 83/100
+  SEO Score: 86/100
+  Best Practices Score: 84/100
+
+PROJECT: haresholmes
+----------------------------------------
+✓ Site is accessible
+Response Time: 0.040411s
+HTTP Status: 200
+  Performance Score: 81/100
+  Accessibility Score: 84/100
+  SEO Score: 94/100
+  Best Practices Score: 84/100
+
+PROJECT: thepiratesdxb
+----------------------------------------
+✗ Site is not accessible
+Response Time: 0.001167N/As
+HTTP Status: 000N/A
+  Performance Score: 79/100
+  Accessibility Score: 87/100
+  SEO Score: 84/100
+  Best Practices Score: 94/100
+
+==========================================
+End of Summary Report

@@ -1,0 +1,29 @@
+==========================================
+PROJECT ANALYSIS REPORT
+Project: amalak
+URL: https://amalak.ae
+Analysis Date: Sat Jun 28 01:30:34 AM +04 2025
+==========================================
+
+✓ Site is accessible
+Response Time: 0.041968s
+HTTP Status: 301
+Security Headers:
+  ✗ Strict-Transport-Security: Not found
+  ✗ X-Frame-Options: Not found
+  ✗ X-Content-Type-Options: Not found
+  ✗ X-XSS-Protection: Not found
+  ✗ Content-Security-Policy: Not found
+  ✗ Referrer-Policy: Not found
+Content Length: 161 characters
+Technologies Detected:
+Performance Metrics:
+  Performance Score: 64/100
+  Accessibility Score: 91/100
+  SEO Score: 87/100
+  Best Practices Score: 80/100
+SSL/TLS: notBefore=Jun 21 21:33:13 2025 GMT
+notAfter=Sep 19 21:33:12 2025 GMT
+
+Analysis completed at: Sat Jun 28 01:30:35 AM +04 2025
+==========================================

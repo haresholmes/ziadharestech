@@ -1,0 +1,186 @@
+==========================================
+ADVANCED PROJECT ANALYSIS REPORT
+Project: haresholmes
+URL: https://haresholmes.eu.org
+Analysis Date: Sat Jun 28 01:41:34 AM +04 2025
+Analysis Type: Comprehensive Technical Audit
+==========================================
+
+PERFORMANCE METRICS:
+     time_namelookup:  0.001238
+        time_connect:  0.078096
+     time_appconnect:  0.094567
+    time_pretransfer:  0.094615
+       time_redirect:  0.000000
+  time_starttransfer:  0.483299
+                     ----------
+          time_total:  0.483400
+           http_code:  200
+         http_version:  2
+        size_download:  18876
+       speed_download:  39048
+HTTP HEADERS ANALYSIS:
+HTTP/2 200 
+server: GitHub.com
+content-type: text/html; charset=utf-8
+last-modified: Fri, 27 Jun 2025 07:31:35 GMT
+access-control-allow-origin: *
+etag: "685e48d7-49bc"
+expires: Fri, 27 Jun 2025 21:41:18 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: 5421:1A8093:092A:0FAD:685F0D9E
+accept-ranges: bytes
+date: Fri, 27 Jun 2025 21:42:18 GMT
+via: 1.1 varnish
+age: 0
+x-served-by: cache-fjr990023-FJR
+x-cache: HIT
+x-cache-hits: 1
+x-timer: S1751060538.371764,VS0,VE1
+vary: Accept-Encoding
+x-fastly-request-id: 704de680d9e2e488ff77f1c37158bc4bbb6d2a46
+content-length: 18876
+
+CONTENT ANALYSIS:
+  Total Characters: 18817
+  Total Lines: 346
+  Total Words: 1018
+  Average Words per Line: 2.94
+TECHNOLOGY DETECTION:
+  ✗ WordPress: Not detected
+  ✗ React: Not detected
+  ✓ Vue.js (pattern: v-)
+  ✗ Angular: Not detected
+  ✓ Bootstrap (pattern: bootstrap)
+  ✗ jQuery: Not detected
+  ✗ PHP: Not detected
+  ✓ Node.js (pattern: npm)
+  ✗ Django: Not detected
+  ✗ Flask: Not detected
+  ✗ Laravel: Not detected
+  ✗ Symfony: Not detected
+  ✗ TypeScript: Not detected
+  ✗ Sass: Not detected
+  ✓ Webpack (pattern: bundle)
+  ✗ Docker: Not detected
+  ✗ AWS: Not detected
+  ✗ Google Analytics: Not detected
+  ✓ Cloudflare (pattern: cloudflare)
+  ✓ CDN (pattern: cdn)
+SECURITY ANALYSIS:
+  ✗ HSTS: Not found
+  ✗ X-Frame-Options: Not found
+  ✗ X-Content-Type-Options: Not found
+  ✗ X-XSS-Protection: Not found
+  ✗ CSP: Not found
+  ✗ Referrer-Policy: Not found
+  ✗ Permissions-Policy: Not found
+  ✗ X-Permitted-Cross-Domain-Policies: Not found
+SSL/TLS ANALYSIS:
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            05:fc:56:44:c4:07:29:70:d8:88:97:07:66:23:92:ef:fc:e0
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=US, O=Let's Encrypt, CN=R10
+        Validity
+            Not Before: Jun 23 05:28:29 2025 GMT
+            Not After : Sep 21 05:28:28 2025 GMT
+        Subject: CN=haresholmes.eu.org
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:98:98:58:eb:ec:cb:b6:77:81:e8:70:0e:87:22:
+                    31:ef:d2:63:63:67:01:9c:90:4e:10:16:94:9c:f5:
+                    19:b6:05:30:56:b6:82:41:62:d4:31:0b:79:c0:d4:
+                    e1:c1:36:13:1f:5c:70:16:21:d0:1c:53:13:8c:3c:
+                    0c:8c:5d:15:47:f8:c7:94:29:41:8f:c2:e3:b2:29:
+                    b6:1b:77:8d:a8:73:ea:d8:63:91:37:d2:26:50:61:
+                    a1:04:bd:fa:76:22:06:a5:a0:3d:dc:07:4b:8f:b7:
+                    06:24:b6:17:92:2e:c9:ae:dc:16:2c:2c:c3:6c:94:
+                    23:2d:9f:9d:d4:40:da:98:26:3d:67:87:37:b6:4c:
+                    a4:a3:ee:52:31:e3:87:2c:ed:38:ee:70:a5:b5:98:
+                    7d:c3:87:96:fb:2e:45:6c:a2:6c:24:ff:63:42:b6:
+                    e4:7c:d4:5f:6b:96:73:24:7a:0c:a5:89:68:86:f1:
+                    71:03:79:53:0e:88:1c:6e:5a:a5:f0:80:0c:66:0d:
+                    a4:a2:20:b5:b9:09:1c:00:35:8f:3c:89:a7:8a:8c:
+                    4e:57:fd:1e:28:19:3a:63:d0:56:03:e9:f5:32:0d:
+                    37:40:3f:9a:90:71:33:d7:d7:b4:7e:41:48:b4:05:
+                    aa:8e:f7:65:36:87:87:66:ca:ff:6d:83:43:ef:48:
+                    ac:8d
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                58:C9:B2:AA:68:E6:A5:48:CC:D8:2B:E8:42:B2:BF:7F:BE:45:66:68
+            X509v3 Authority Key Identifier: 
+                BB:BC:C3:47:A5:E4:BC:A9:C6:C3:A4:72:0C:10:8D:A2:35:E1:C8:E8
+            Authority Information Access: 
+                CA Issuers - URI:http://r10.i.lencr.org/
+            X509v3 Subject Alternative Name: 
+                DNS:haresholmes.eu.org, DNS:www.haresholmes.eu.org
+            X509v3 Certificate Policies: 
+                Policy: 2.23.140.1.2.1
+            X509v3 CRL Distribution Points: 
+                Full Name:
+                  URI:http://r10.c.lencr.org/97.crl
+            CT Precertificate SCTs: 
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : 7D:59:1E:12:E1:78:2A:7B:1C:61:67:7C:5E:FD:F8:D0:
+                                87:5C:14:A0:4E:95:9E:B9:03:2F:D9:0E:8C:2E:79:B8
+                    Timestamp : Jun 23 06:26:59.686 2025 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:45:02:20:0E:AE:C2:0E:1A:65:C8:49:18:AE:9F:0A:
+                                6E:DC:B8:F4:5D:1F:3A:9F:06:B5:0F:34:8E:55:26:ED:
+                                FD:80:9C:C9:02:21:00:D3:E6:0A:88:6D:9E:DB:A0:C4:
+                                69:A0:A7:84:39:DD:EA:A5:A0:0E:21:49:B0:DB:CA:D0:
+                                F6:2F:3E:11:85:E2:B2
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : CC:FB:0F:6A:85:71:09:65:FE:95:9B:53:CE:E9:B2:7C:
+                                22:E9:85:5C:0D:97:8D:B6:A9:7E:54:C0:FE:4C:0D:B0
+                    Timestamp : Jun 23 06:27:03.701 2025 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:45:02:20:40:62:CF:1B:8C:20:56:62:96:21:89:12:
+                                8A:B8:91:8A:A7:10:74:8F:9B:8C:AD:0B:C7:BF:B6:36:
+                                1A:0B:88:8F:02:21:00:A2:FD:5F:60:13:CD:8C:A1:CC:
+                                40:AE:81:09:60:5A:7E:19:BE:57:23:40:18:BE:B4:C7:
+                                BC:67:8A:B5:20:F4:C7
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        32:3b:3a:00:44:b1:ae:f3:66:55:11:cd:6b:5d:7e:d6:e4:1a:
+        ab:0e:5a:81:c5:c2:3f:d2:64:24:19:39:11:26:b0:90:c7:60:
+        00:5d:d7:e6:1c:c2:03:f3:66:8a:8a:a5:31:6f:ef:47:90:c6:
+        22:7f:82:b5:18:49:3c:26:f5:a0:c6:2b:dc:be:8b:dd:08:38:
+        61:a9:3e:90:b3:db:94:dc:a2:1f:d9:2a:65:46:88:ac:30:d2:
+        0d:ba:3b:12:f2:7a:f3:06:53:d5:1b:2b:fa:8d:39:88:96:da:
+        83:e2:f9:90:7c:ca:f2:28:8e:ba:51:6e:85:6e:be:27:74:ab:
+        0d:d6:09:01:8b:a9:ef:25:16:14:17:ff:a5:e3:a0:31:0e:c8:
+        fa:ee:d6:a1:97:27:49:5f:62:9b:3e:54:b9:b1:3a:bd:ad:9a:
+        d9:05:a4:d2:55:0c:6d:bf:49:a8:8c:d7:7e:c4:a9:f7:15:fd:
+        be:d9:a7:4a:fb:8e:c0:42:4d:76:18:ed:54:72:e8:c4:fd:c9:
+        a6:39:d5:1c:8c:0d:77:c0:fe:4a:9b:bb:22:c5:21:33:6b:89:
+        50:fe:83:7a:d6:48:01:f4:7e:1c:fd:e5:58:80:ed:30:27:bc:
+        40:d6:87:e9:e7:bc:17:be:06:2f:55:21:75:6d:e0:bb:1b:95:
+        bb:56:77:aa
+ADVANCED PERFORMANCE METRICS:
+  Performance Score: 97/100
+  Accessibility Score: 94/100
+  SEO Score: 81/100
+  Best Practices Score: 88/100
+  Security Score: 73/100
+  Overall Grade: A
+
+Analysis completed at: Sat Jun 28 01:41:35 AM +04 2025
+==========================================

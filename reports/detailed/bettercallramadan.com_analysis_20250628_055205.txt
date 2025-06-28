@@ -1,0 +1,19 @@
+=== BETTERCALLRAMADAN.COM ANALYSIS REPORT ===
+Generated: Sat Jun 28 05:52:05 AM +04 2025
+URL: https://bettercallramadan.com
+Domain: ziadhares.tech
+
+ACCESSIBILITY TEST:
+- Status: INACCESSIBLE
+- Response Code: 
+- Response Time: s
+
+TECHNICAL ANALYSIS:
+Website is not accessible via standard methods.
+- DNS issues
+
+PERFORMANCE METRICS (Simulated):
+- Performance Score: N/A
+- Accessibility Score: N/A
+- SEO Score: N/A
+- Best Practices Score: N/A
