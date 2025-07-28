@@ -641,3 +641,358 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, 4000);
 }); 
+
+// Ziad Hares Tech - Services Website JavaScript
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Terminal Loading Screen
+    const loadingScreen = document.getElementById('loading-screen');
+    const matrixBg = document.getElementById('matrix-bg');
+    
+    // Create matrix background effect
+    function createMatrixBackground() {
+        const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+        const columns = Math.floor(window.innerWidth / 20);
+        const rows = Math.floor(window.innerHeight / 20);
+        
+        for (let i = 0; i < columns * rows; i++) {
+            const char = document.createElement('span');
+            char.className = 'matrix-char';
+            char.textContent = chars[Math.floor(Math.random() * chars.length)];
+            char.style.left = (i % columns) * 20 + 'px';
+            char.style.top = Math.floor(i / columns) * 20 + 'px';
+            char.style.animationDelay = Math.random() * 2 + 's';
+            matrixBg.appendChild(char);
+        }
+    }
+    
+    // Initialize matrix background
+    createMatrixBackground();
+    
+    // Hide loading screen after 3 seconds
+    setTimeout(() => {
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 500);
+    }, 3000);
+    
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('.nav-link, .footer-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Back to top button
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+    
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Contact form handling
+    const contactForm = document.getElementById('contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const service = formData.get('service');
+            const budget = formData.get('budget');
+            const message = formData.get('message');
+            
+            // Basic validation
+            if (!name || !email || !service || !budget || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Create success message
+                const successMessage = document.createElement('div');
+                successMessage.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: var(--success);
+                    color: var(--dark-bg);
+                    padding: 1rem 2rem;
+                    border-radius: 8px;
+                    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+                    z-index: 1000;
+                    font-weight: 600;
+                `;
+                successMessage.textContent = 'Message sent successfully! I\'ll get back to you soon.';
+                
+                document.body.appendChild(successMessage);
+                
+                // Remove success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 5000);
+                
+                // Reset form
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                
+                // Log form data (for development)
+                console.log('Contact Form Submission:', {
+                    name,
+                    email,
+                    service,
+                    budget,
+                    message
+                });
+                
+            }, 2000);
+        });
+    }
+    
+    // Animate elements on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all service cards, pricing cards, and portfolio cards
+    const animatedElements = document.querySelectorAll('.service-card, .pricing-card, .portfolio-card');
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+    
+    // Terminal cursor effect
+    const cursor = document.querySelector('.cursor');
+    if (cursor) {
+        setInterval(() => {
+            cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+        }, 500);
+    }
+    
+    // Service card hover effects
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+    
+    // Pricing card interactions
+    const pricingCards = document.querySelectorAll('.pricing-card');
+    pricingCards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Remove active class from all cards
+            pricingCards.forEach(c => c.classList.remove('active'));
+            // Add active class to clicked card
+            this.classList.add('active');
+        });
+    });
+    
+    // Portfolio card interactions
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+    portfolioCards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Add click effect
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'translateY(-5px)';
+            }, 150);
+        });
+    });
+    
+    // Status bar animations
+    const statusDots = document.querySelectorAll('.status-dot');
+    statusDots.forEach(dot => {
+        setInterval(() => {
+            dot.style.opacity = '0.5';
+            setTimeout(() => {
+                dot.style.opacity = '1';
+            }, 1000);
+        }, 2000);
+    });
+    
+    // Tech tag hover effects
+    const techTags = document.querySelectorAll('.tech-tag');
+    techTags.forEach(tag => {
+        tag.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1)';
+            this.style.boxShadow = '0 0 15px rgba(0, 255, 0, 0.5)';
+        });
+        
+        tag.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+            this.style.boxShadow = 'none';
+        });
+    });
+    
+    // Responsive navigation
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    
+    if (navToggle && navList) {
+        navToggle.addEventListener('click', function() {
+            navList.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    }
+    
+    // Close mobile menu when clicking on a link
+    const mobileNavLinks = document.querySelectorAll('.nav-list a');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (navList && navList.classList.contains('active')) {
+                navList.classList.remove('active');
+                navToggle.classList.remove('active');
+            }
+        });
+    });
+    
+    // Parallax effect for hero section
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) {
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            heroSection.style.transform = `translateY(${rate}px)`;
+        });
+    }
+    
+    // Initialize tooltips for tech tags
+    techTags.forEach(tag => {
+        tag.title = tag.textContent;
+    });
+    
+    // Add loading animation to buttons
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            if (this.getAttribute('href') === '#contact') {
+                return; // Don't animate contact links
+            }
+            
+            // Create ripple effect
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                pointer-events: none;
+            `;
+            
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+    
+    // Add CSS for ripple animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        
+        .btn {
+            position: relative;
+            overflow: hidden;
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Console welcome message
+    console.log(`
+    %cZiad Hares Tech Services
+    %cWelcome to my services website!
+    
+    Available services:
+    - Cybersecurity & Risk Assessment
+    - Web Development & Design
+    - Software Development (Python/C++)
+    - Server Building & Hosting
+    - Project Management & Consulting
+    - Database Design & Management
+    
+    Pricing Plans:
+    - Basic: AED 500/month (Basic website building)
+    - Advanced: AED 800/month (Weekly visits, server building, hosting)
+    - Enterprise: Custom pricing (Full project management)
+    
+    Contact: ziad@haresholmes.eu.org
+    `, 
+    'color: #00ff00; font-size: 20px; font-weight: bold;',
+    'color: #cccccc; font-size: 14px;'
+    );
+}); 

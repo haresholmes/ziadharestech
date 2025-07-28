@@ -1,191 +1,196 @@
-# Ziad Hares Tech - Technical Portfolio
+# Ziad Hares - IT Services & Solutions
 
-**Domain:** ziadhares.tech
+Professional IT services website showcasing cybersecurity, web development, and software solutions for businesses and individuals in Dubai, UAE.
 
-A comprehensive technical portfolio showcasing project analysis, performance metrics, and development reports for developers and engineers.
+## 🌟 Services Offered
 
-## 🌟 Features
+### 🔒 Cybersecurity Services
+- Security Risk Assessment
+- Compliance & Policy Development (ISO 27001, UAE Cyber Law)
+- Vulnerability Analysis
+- Security Training & Awareness
+- Incident Response Planning
 
-### Enhanced Terminal Design
-- **Authentic Terminal Interface**: Realistic terminal window with macOS-style buttons
-- **Matrix Background Effect**: Animated matrix rain effect with Japanese characters
-- **Typing Animation**: Commands appear with realistic typing effect
-- **Enhanced Cursor**: Glowing cursor with authentic terminal behavior
-- **Systemctl Simulation**: Realistic system service commands and output
+### 🌐 Web Development
+- Custom Website Development
+- E-commerce Solutions
+- Responsive Design
+- Performance Optimization
+- Security Implementation
 
-### Real-Time Project Analysis
-- **Live Website Monitoring**: Real accessibility and performance checks
-- **Security Analysis**: SSL/TLS verification and security headers assessment
-- **Response Time Tracking**: Actual response times from live websites
-- **Automated Reports**: Generated detailed technical reports
+### 💻 Software Development
+- Python Application Development
+- C++ System Programming
+- API Development & Integration
+- Database Design & Implementation
+- Algorithm Optimization
 
-### Technical Portfolio Sections
-- **Project Analysis**: Real-time status of all projects
-- **Performance Metrics**: Detailed performance scores and benchmarks
-- **Security Reports**: Comprehensive security analysis
-- **Technical Documentation**: Developer-focused project documentation
+### 📊 Project Management
+- Project Lifecycle Management
+- Risk Assessment & Mitigation
+- Stakeholder Communication
+- Resource Allocation
+- Budget Planning
 
-## 📊 Current Analysis Results
+### 🗄️ Database Systems
+- Database Design & Modeling
+- SQL Development & Optimization
+- Data Migration & Integration
+- Backup & Recovery Planning
+- Performance Tuning
 
-### Accessible Projects
-- **AMALAK.AE**: ✓ ACCESSIBLE (WWW) (0.043s response, SSL/TLS secure, Interior Design Services)
-- **BETTERCALLRAMADAN.COM**: ✓ ACCESSIBLE (WWW) (0.035s response, SSL/TLS secure, Law Firm, Security Headers: 6/6)
-- **HARESHOLMES.EU.ORG**: ✓ ACCESSIBLE (0.044s response, SSL/TLS secure, Personal Portfolio)
-- **THEPIRATESDXB.SOFTWARE**: ✓ ACCESSIBLE (WWW) (0.047s response, SSL/TLS secure, Cyberpunk Software House)
+### 🔧 System Analysis
+- Requirements Analysis
+- Use Case Modeling
+- Process Flow Design
+- System Architecture Planning
+- Documentation & Specifications
 
-### Project Descriptions
-- **AMALAK.AE**: Premier interior design and contracting services in Dubai with award-winning design team
-- **BETTERCALLRAMADAN.COM**: Dubai's premier law firm with 25+ years of experience in legal consultation
-- **HARESHOLMES.EU.ORG**: Personal portfolio showcasing cybersecurity expertise and web development skills
-- **THEPIRATESDXB.SOFTWARE**: Cyberpunk-themed software house and cybersecurity firm with advanced UI/UX
+## 💰 Pricing Plans
 
-### Security Analysis
-- **SSL/TLS**: All accessible sites have secure connections
-- **Security Headers**: BETTERCALLRAMADAN.COM has 6/6 security headers implemented
-- **Other Sites**: Basic SSL/TLS security, security headers recommended
+### Basic - AED 500/hour
+- Consultation & Planning
+- Basic Implementation
+- Documentation
+- 1 Month Support
 
-## 🛠️ Technical Stack
+### Professional - AED 800/hour
+- Everything in Basic
+- Advanced Implementation
+- Security Audits
+- Performance Optimization
+- 3 Months Support
+- Training & Handover
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Styling**: Custom CSS with terminal/cyberpunk theme
-- **Fonts**: JetBrains Mono, Inter
-- **Analysis**: Bash scripts with curl/wget/openssl
-- **Reports**: Automated HTML and text reports
+### Enterprise - Custom Pricing
+- Everything in Professional
+- Full Project Management
+- Custom Development
+- Ongoing Maintenance
+- 24/7 Support
+- Compliance & Security
 
-## 🚀 Quick Start
+## 🛠️ Technologies & Skills
 
-### Local Development
-```bash
-# Clone the repository
-git clone <repository-url>
-cd ziadhares.tech
+### Programming Languages
+- **Python**: Advanced OOP, APIs, Data Visualization, Exception Handling
+- **C++**: Classes, Inheritance, Templates, File I/O, Exception Handling
+- **JavaScript**: Modern ES6+, DOM manipulation, APIs
+- **PHP**: Server-side scripting, database integration
 
-# Start local server
-python3 -m http.server 8000
+### Web Technologies
+- **HTML5/CSS3**: Semantic markup, responsive design
+- **JavaScript**: Frontend development, frameworks
+- **PHP**: Backend development, server-side logic
+- **UX/UI Design**: Figma, prototyping, user-centered design
 
-# Open in browser
-open http://localhost:8000
-```
+### Database & Data Management
+- **SQL**: Querying, optimization, transactions
+- **ER Modeling**: Database design, normalization
+- **Data Management**: Backup, recovery, access control
+- **Statistical Analysis**: Descriptive statistics, hypothesis testing
 
-### Run Analysis
-```bash
-# Make script executable
-chmod +x analyze-all-projects.sh
+### Cybersecurity
+- **Cryptography**: Encryption, hashing, digital signatures
+- **Access Control**: Authentication, authorization, RBAC
+- **Security Policies**: ISO 27001, UAE Cyber Law compliance
+- **Risk Assessment**: Threat modeling, vulnerability analysis
 
-# Run comprehensive analysis
-./analyze-all-projects.sh
-```
+### Project Management
+- **Agile Methodologies**: Scrum, Kanban, iterative development
+- **Tools**: MS Project, Jira, Trello
+- **Risk Management**: Assessment, mitigation, monitoring
+- **Stakeholder Communication**: Reporting, presentations
 
 ## 📁 Project Structure
 
 ```
-ziadhares.tech/
-├── index.html              # Main portfolio page
-├── styles.css              # Enhanced terminal styling
-├── script.js               # Matrix effects & interactions
-├── analyze-all-projects.sh # Comprehensive analysis script
-├── reports/                # Generated analysis reports
-│   ├── detailed/           # Individual project reports
-│   ├── summary/            # Summary reports
-│   └── live_analysis_*.html # Live analysis reports
-├── logo.png               # Portfolio logo
-├── manifest.json          # PWA manifest
-├── sitemap.xml           # SEO sitemap
-└── robots.txt            # Search engine directives
+ziadharestech/
+├── index.html              # Main services website
+├── styles.css              # Main stylesheet with terminal theme
+├── script.js               # JavaScript functionality
+├── manifest.json           # PWA manifest
+├── logo.png               # Company logo
+├── CNAME                  # Custom domain configuration
+├── robots.txt             # Search engine configuration
+├── sitemap.xml            # Site structure for SEO
+├── haresholmes.github.io/ # Portfolio website (reference)
+└── README.md              # This file
 ```
 
-## 🔧 Analysis Scripts
+## 🚀 Features
 
-### Main Analysis Script
-- **File**: `analyze-all-projects.sh`
-- **Features**:
-  - Multi-method website accessibility testing
-  - SSL/TLS security verification
-  - Security headers analysis
-  - Response time measurement
-  - Automated report generation
+### Terminal Hackery Theme
+- Matrix-style loading screen
+- Terminal-inspired UI elements
+- Green-on-black color scheme
+- Typing animations and effects
 
-### Generated Reports
-- **Detailed Reports**: Individual project analysis in `reports/detailed/`
-- **Summary Reports**: Overview reports in `reports/summary/`
-- **HTML Reports**: Live analysis reports for web viewing
+### Responsive Design
+- Mobile-first approach
+- Cross-browser compatibility
+- Progressive Web App (PWA) support
+- Fast loading times
 
-## 🎨 Design Features
+### Interactive Elements
+- Smooth scrolling navigation
+- Hover effects and animations
+- Contact form with validation
+- Service cards with detailed information
 
-### Terminal Aesthetics
-- **Authentic Terminal Window**: macOS-style with colored buttons
-- **Matrix Rain Effect**: Animated background with Japanese characters
-- **Glowing Effects**: Neon-style glows and shadows
-- **Typing Animation**: Realistic command typing simulation
-- **Enhanced Cursors**: Authentic terminal cursor behavior
+### SEO Optimized
+- Semantic HTML structure
+- Meta tags and Open Graph
+- Sitemap and robots.txt
+- Fast loading and accessibility
 
-### Color Scheme
-- **Primary**: #00ff00 (Matrix Green)
-- **Secondary**: #0080ff (Cyber Blue)
-- **Accent**: #ff8000 (Orange)
-- **Background**: #0a0a0a (Dark)
-- **Terminal**: #000000 (Pure Black)
+## 📞 Contact Information
 
-## 📈 Performance Metrics
+- **Email**: ziad@haresholmes.eu.org
+- **Phone**: +971 58 899 7129 / +971 56 120 0583
+- **Location**: JLT, Dubai, UAE
+- **LinkedIn**: [linkedin.com/in/ziyadhares](https://www.linkedin.com/in/ziyadhares)
+- **GitHub**: [github.com/haresholmes](https://github.com/haresholmes)
 
-### Current Scores (Accessible Sites)
-- **AMALAK.AE**: Performance 85/100, Accessibility 92/100, SEO 88/100
-- **BETTERCALLRAMADAN.COM**: Performance 88/100, Accessibility 94/100, SEO 91/100
-- **HARESHOLMES.EU.ORG**: Performance 92/100, Accessibility 95/100, SEO 89/100
-- **THEPIRATESDXB.SOFTWARE**: Performance 90/100, Accessibility 96/100, SEO 93/100
+## 🎓 Education & Experience
 
-## 🌐 Deployment
+### Education
+- **BSc Cybersecurity** - University of Wollongong in Dubai (2023-2026)
+- **American High School Diploma** - Pioneers International School, Alexandria
 
-### Production Deployment
-1. Upload files to web server
-2. Configure domain (ziadhares.tech)
-3. Enable HTTPS
-4. Set up automated analysis cron job
+### Professional Experience
+- **Web Developer Intern** - Axon Technologies (Oct 2024 - Jan 2025)
+- **Intern** - Armada Holding (Dec 2022 - Apr 2023)
+- **Cybersecurity Club Member** - University of Wollongong in Dubai
 
-### Recommended Setup
-```bash
-# Set up automated analysis (cron job)
-0 */6 * * * /path/to/ziadhares.tech/analyze-all-projects.sh
+## 🔧 Development
 
-# Monitor logs
-tail -f /var/log/portfolio-analysis.log
-```
+### Local Development
+1. Clone the repository
+2. Open `index.html` in a web browser
+3. For development server: `python -m http.server 8000`
 
-## 📞 Contact & Support
+### Customization
+- Update service offerings in `index.html`
+- Modify pricing in the pricing section
+- Add new portfolio projects
+- Update contact information
 
-**Domain:** ziadhares.tech  
-**Analysis Engine:** Automated Bash Scripts  
-**Report Generation:** Real-time  
-**Technical Focus:** Developer & Engineer Portfolio
+### Deployment
+- Static site hosting (GitHub Pages, Netlify, Vercel)
+- Custom domain configuration via CNAME
+- SSL certificate for HTTPS
 
-## 🔄 Recent Updates
+## 📄 License
 
-### Latest Changes (June 2025)
-- ✅ Updated domain to ziadhares.tech
-- ✅ Enhanced terminal design with matrix effects
-- ✅ Implemented real-time website analysis
-- ✅ Added authentic terminal loading screen
-- ✅ Generated comprehensive analysis reports
-- ✅ Improved security analysis capabilities
+© 2024 Ziad Hares. All rights reserved.
 
-### Analysis Results
-- **4/4 websites accessible** (100% uptime with correct URLs)
-- **SSL/TLS security**: 100% on accessible sites
-- **Security headers**: 1/4 sites have comprehensive security headers (BETTERCALLRAMADAN.COM)
-- **Average response time**: 0.042s for accessible sites
-- **URL Configuration**: Some sites require www prefix for accessibility
+## 🔗 Links
 
-### Project Corrections
-- **AMALAK.AE**: Interior design services (not e-commerce)
-- **BETTERCALLRAMADAN.COM**: Law firm with security headers (not service booking)
-- **HARESHOLMES.EU.ORG**: Personal portfolio (correct)
-- **THEPIRATESDXB.SOFTWARE**: Cyberpunk software house (correct)
+- **Services Website**: [ziadhares.tech](https://ziadhares.tech)
+- **Portfolio Website**: [haresholmes.eu.org](https://haresholmes.eu.org)
+- **Technical Portfolio**: [ziadhares.tech](https://ziadhares.tech)
 
-## 📝 License
+---
 
-This portfolio is designed for technical demonstration and project analysis purposes. 
-
-### Note on URL Configuration
-- Some websites require `www` prefix for accessibility
-- Non-www versions may redirect or be unavailable
-- All accessible sites have SSL/TLS security enabled 
+*Built with ❤️ using modern web technologies and cybersecurity best practices.* 
