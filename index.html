@@ -3,412 +3,785 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ziad Hares - Technical Portfolio & Project Analysis. Comprehensive reports and technical documentation for developers and engineers.">
-    <meta name="keywords" content="Ziad Hares, Technical Portfolio, Project Analysis, Developer, Engineer, Technical Reports, Code Analysis">
-    <meta name="author" content="Ziad Hares">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ziadhares.tech/">
-    <meta property="og:title" content="Ziad Hares - Technical Portfolio & Project Analysis">
-    <meta property="og:description" content="Technical portfolio and project analysis for developers and engineers">
-    <meta property="og:image" content="https://ziadhares.tech/logo.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://ziadhares.tech/">
-    <meta property="twitter:title" content="Ziad Hares - Technical Portfolio & Project Analysis">
-    <meta property="twitter:description" content="Technical portfolio and project analysis for developers and engineers">
-    <meta property="twitter:image" content="https://ziadhares.tech/logo.png">
-
-    <title>Ziad Hares Tech - Technical Portfolio</title>
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
-    <link rel="preload" href="logo.png" as="image">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="logo.png">
-    <link rel="apple-touch-icon" href="logo.png">
-    <link rel="icon" type="image/png" href="logo.png">
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#1a1a1a">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Ziad Hares - Web Development & Server Services</title>
+    <meta name="description" content="Building digital excellence with modern web development. We are Ziad Hares, a Web Developer and Server Specialist building websites, servers, and hosting solutions for businesses and individuals.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <!-- Terminal Loading Screen -->
-    <div id="loading-screen" class="terminal-loading">
-        <div class="matrix-bg" id="matrix-bg"></div>
-        <div class="terminal-window">
-            <div class="terminal-header">
-                <div class="terminal-buttons">
-                    <span class="terminal-btn"></span>
-                    <span class="terminal-btn"></span>
-                    <span class="terminal-btn"></span>
-                </div>
-                <div class="terminal-title">ziadhares.tech</div>
-            </div>
-            <div class="terminal-content">
-                <div class="terminal-line">
-                    <span class="prompt">root</span>
-                    <span class="command">systemctl start portfolio.service</span>
-                </div>
-                <div class="terminal-output">● portfolio.service - Ziad Hares Tech Portfolio</div>
-                <div class="terminal-output">   Loaded: loaded (/etc/systemd/system/portfolio.service; enabled)</div>
-                <div class="terminal-output">   Active: active (running) since $(date)</div>
-                
-                <div class="terminal-line">
-                    <span class="prompt">root</span>
-                    <span class="command">./analyze_projects.sh</span>
-                </div>
-                <div class="terminal-output">=== ZIAD HARES TECH - PROJECT ANALYSIS ===</div>
-                <div class="terminal-output">Analyzing: AMALAK.AE... ✓ ACCESSIBLE (WWW)</div>
-                <div class="terminal-output">Analyzing: BETTERCALLRAMADAN.COM (WWW)... ✓ ACCESSIBLE</div>
-                <div class="terminal-output">Analyzing: HARESHOLMES.EU.ORG... ✓ ACCESSIBLE</div>
-                <div class="terminal-output">Analyzing: THEPIRATESDXB.SOFTWARE (WWW)... ✓ ACCESSIBLE</div>
-                
-                <div class="terminal-line">
-                    <span class="prompt">root</span>
-                    <span class="command">systemctl status portfolio.service</span>
-                </div>
-                <div class="terminal-output">● portfolio.service - Ziad Hares Tech Portfolio</div>
-                <div class="terminal-output">   Loaded: loaded (/etc/systemd/system/portfolio.service; enabled)</div>
-                <div class="terminal-output">   Active: active (running) since $(date)</div>
-                <div class="terminal-output">   Main PID: 1234 (portfolio)</div>
-                <div class="terminal-output">   Status: "Portfolio ready at ziadhares.tech"</div>
-                
-                <div class="terminal-line">
-                    <span class="prompt">root</span>
-                    <span class="command">echo "Portfolio loaded successfully"</span>
-                    <span class="cursor"></span>
-                </div>
-            </div>
+    <!-- Enhanced 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="particle-overlay"></div>
+    
+    <!-- 3D Floating Elements -->
+    <div class="floating-elements">
+        <div class="floating-shield-3d">
+            <div class="shield-body-3d"></div>
+            <div class="shield-glow-3d"></div>
+            <div class="shield-particles-3d"></div>
+        </div>
+        <div class="floating-lock-3d">
+            <div class="lock-body-3d"></div>
+            <div class="lock-keyhole-3d"></div>
+            <div class="lock-glow-3d"></div>
+        </div>
+        <div class="floating-code-3d">
+            <div class="code-block-3d"></div>
+            <div class="code-line-3d"></div>
+            <div class="code-line-3d"></div>
+            <div class="code-line-3d"></div>
+        </div>
+        <div class="energy-rings-3d">
+            <div class="ring-3d ring-1-3d"></div>
+            <div class="ring-3d ring-2-3d"></div>
+            <div class="ring-3d ring-3-3d"></div>
+        </div>
+        
+        <!-- Additional 3D Elements -->
+        <div class="floating-key-3d">
+            <div class="key-body-3d"></div>
+            <div class="key-teeth-3d"></div>
+            <div class="key-glow-3d"></div>
+        </div>
+        <div class="floating-firewall-3d">
+            <div class="firewall-body-3d"></div>
+            <div class="firewall-lines-3d"></div>
+            <div class="firewall-glow-3d"></div>
+        </div>
+        <div class="floating-database-3d">
+            <div class="database-body-3d"></div>
+            <div class="database-lines-3d"></div>
+            <div class="database-glow-3d"></div>
+        </div>
+        <div class="floating-network-3d">
+            <div class="network-node-3d"></div>
+            <div class="network-connection-3d"></div>
+            <div class="network-pulse-3d"></div>
+        </div>
+        <div class="floating-binary-3d">
+            <div class="binary-digit-3d">1</div>
+            <div class="binary-digit-3d">0</div>
+            <div class="binary-digit-3d">1</div>
+            <div class="binary-digit-3d">0</div>
+        </div>
+        <div class="floating-certificate-3d">
+            <div class="certificate-body-3d"></div>
+            <div class="certificate-seal-3d"></div>
+            <div class="certificate-glow-3d"></div>
+        </div>
+        <div class="floating-virus-3d">
+            <div class="virus-body-3d"></div>
+            <div class="virus-spikes-3d"></div>
+            <div class="virus-glow-3d"></div>
+        </div>
+        <div class="floating-encryption-3d">
+            <div class="encryption-symbol-3d"></div>
+            <div class="encryption-rings-3d"></div>
+            <div class="encryption-glow-3d"></div>
         </div>
     </div>
 
-    <div class="container">
-        <header class="header">
-            <div class="logo">
-                <img src="logo.png" alt="Ziad Hares Tech Logo" class="logo-img">
-                <h1>ZIAD HARES TECH</h1>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="Ziad Hares Logo" class="logo-img">
+                <a href="#home">ZIAD HARES</a>
             </div>
-            <p class="tagline">Technical Analysis & Development Portfolio</p>
-            <div class="status-bar">
-                <span class="status-item">● LIVE</span>
-                <span class="status-item">● SECURE</span>
-                <span class="status-item">● ANALYZED</span>
+            <div class="nav-menu">
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#about">About & Contact</a>
+                <a href="#contact" class="nav-email">ziad@haresholmes.eu.org</a>
+                <a href="#contact" class="nav-cta">Contact Us</a>
             </div>
-        </header>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-        <nav class="nav">
-            <a href="#analysis" class="nav-link">ANALYSIS</a>
-            <a href="#projects" class="nav-link">PROJECTS</a>
-            <a href="#reports" class="nav-link">REPORTS</a>
-            <a href="#metrics" class="nav-link">METRICS</a>
-            <a href="#contact" class="nav-link">CONTACT</a>
-        </nav>
+    <main>
 
-        <main class="main">
-            <section id="analysis" class="section">
-                <h2 class="section-title">REAL-TIME PROJECT ANALYSIS</h2>
-                <div class="analysis-grid">
-                    <div class="project-card">
-                        <h3>AMALAK.AE</h3>
-                        <div class="metrics">
-                            <div class="metric">
-                                <span class="metric-label">Status:</span>
-                                <span class="metric-value status-good">✓ ACCESSIBLE (WWW)</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Response:</span>
-                                <span class="metric-value">0.043s</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">HTTP:</span>
-                                <span class="metric-value">301 → 200</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Performance:</span>
-                                <span class="metric-value">85/100</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Accessibility:</span>
-                                <span class="metric-value">92/100</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">SEO:</span>
-                                <span class="metric-value">88/100</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Best Practices:</span>
-                                <span class="metric-value">82/100</span>
-                            </div>
-                        </div>
-                        <div class="security-status">
-                            <span class="security-badge">SSL/TLS ✓</span>
-                            <span class="security-badge">Security Headers 0/4</span>
-                        </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-line">Building digital excellence</span>
+                    <span class="hero-line">We are</span>
+                    <span class="hero-brand">ZIAD HARES</span>
+                    <span class="hero-line">a</span>
+                    <span class="hero-line">Web Developer</span>
+                    <span class="hero-line">& Computer Specialist</span>
+                    <span class="hero-line">building</span>
+                    <span class="hero-line">modern websites & providing</span>
+                    <span class="hero-line"># comprehensive computer services.</span>
+                </h1>
+                <div class="hero-meta">
+                    <span class="hero-year">(2023 – PRESENT)</span>
+                </div>
+                <p class="hero-description">
+                    We build modern websites, custom servers, and provide comprehensive computer services. 
+                    From web development to PC repair and computer supply - we've got you covered with quality solutions.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">See our work</a>
+                    <a href="#services" class="btn btn-secondary">View Services</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-3d-scene">
+                    <div class="floating-shield">
+                        <div class="shield-body"></div>
+                        <div class="shield-glow"></div>
+                        <div class="shield-particles"></div>
                     </div>
-
-                    <div class="project-card">
-                        <h3>BETTERCALLRAMADAN.COM</h3>
-                        <div class="metrics">
-                            <div class="metric">
-                                <span class="metric-label">Status:</span>
-                                <span class="metric-value status-good">✓ ACCESSIBLE (WWW)</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Response:</span>
-                                <span class="metric-value">0.035s</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">HTTP:</span>
-                                <span class="metric-value">200</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Performance:</span>
-                                <span class="metric-value">88/100</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Accessibility:</span>
-                                <span class="metric-value">94/100</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">SEO:</span>
-                                <span class="metric-value">91/100</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Best Practices:</span>
-                                <span class="metric-value">86/100</span>
-                            </div>
-                        </div>
-                        <div class="security-status">
-                            <span class="security-badge">SSL/TLS ✓</span>
-                            <span class="security-badge success">Security Headers 6/6 ✓</span>
-                        </div>
+                    <div class="floating-code">
+                        <div class="code-block"></div>
+                        <div class="code-line"></div>
+                        <div class="code-line"></div>
+                        <div class="code-line"></div>
                     </div>
-
-                    <div class="project-card">
-                        <h3>HARESHOLMES.EU.ORG</h3>
-                        <div class="metrics">
-                            <div class="metric">
-                                <span class="metric-label">Status:</span>
-                                <span class="metric-value status-good">✓ ACCESSIBLE</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Response:</span>
-                                <span class="metric-value">0.044s</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">HTTP:</span>
-                                <span class="metric-value">200</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Performance:</span>
-                                <span class="metric-value">92/100</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Accessibility:</span>
-                                <span class="metric-value">95/100</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">SEO:</span>
-                                <span class="metric-value">89/100</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Best Practices:</span>
-                                <span class="metric-value">87/100</span>
-                            </div>
-                        </div>
-                        <div class="security-status">
-                            <span class="security-badge">SSL/TLS ✓</span>
-                            <span class="security-badge">Security Headers 0/4</span>
-                        </div>
+                    <div class="floating-lock">
+                        <div class="lock-body"></div>
+                        <div class="lock-keyhole"></div>
+                        <div class="lock-glow"></div>
                     </div>
+                    <div class="energy-rings">
+                        <div class="ring ring-1"></div>
+                        <div class="ring ring-2"></div>
+                        <div class="ring ring-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="project-card">
-                        <h3>THEPIRATESDXB.SOFTWARE</h3>
-                        <div class="metrics">
-                            <div class="metric">
-                                <span class="metric-label">Status:</span>
-                                <span class="metric-value status-good">✓ ACCESSIBLE (WWW)</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Response:</span>
-                                <span class="metric-value">0.047s</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">HTTP:</span>
-                                <span class="metric-value">200</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Performance:</span>
-                                <span class="metric-value">90/100</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Accessibility:</span>
-                                <span class="metric-value">96/100</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">SEO:</span>
-                                <span class="metric-value">93/100</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-label">Best Practices:</span>
-                                <span class="metric-value">89/100</span>
-                            </div>
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Quality Focus</span>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <span class="stat-number">UOWD</span>
+                    <span class="stat-label">Computer Science Student</span>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Creative Possibilities</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="projects-container">
+            <div class="section-header">
+                <span class="section-number">{01}</span>
+                <h2 class="section-title">Our Work in Action</h2>
+                <h3 class="section-subtitle">Building Modern Digital Experiences. Creating the Future.</h3>
+                <a href="#contact" class="btn btn-secondary">Start your project</a>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-meta">
+                        <span class="project-category">Web Development & Design</span>
+                        <span class="project-date">2024</span>
+                    </div>
+                    <h3 class="project-title">Axon Technologies</h3>
+                    <p class="project-services">Web Design, Web Development, Modern UI/UX</p>
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-code"></i>
                         </div>
-                        <div class="security-status">
-                            <span class="security-badge">SSL/TLS ✓</span>
-                            <span class="security-badge">Security Headers 0/4</span>
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h4>Technology Company</h4>
+                                <p>Modern responsive website</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <section id="projects" class="section">
-                <h2 class="section-title">TECHNICAL PROJECTS</h2>
-                <div class="projects-grid">
-                    <div class="project-item">
-                        <h3>AMALAK.AE</h3>
-                        <p>Premier interior design and contracting services in Dubai with award-winning design team and expert craftsmanship.</p>
-                        <div class="project-details">
-                            <span class="detail">Content: 31,120 chars</span>
-                            <span class="detail">Redirect: 301 → 200</span>
-                            <span class="detail">SSL: Active</span>
-                        </div>
+                <div class="project-card">
+                    <div class="project-meta">
+                        <span class="project-category">E-commerce & Web Development</span>
+                        <span class="project-date">2024</span>
                     </div>
-                    <div class="project-item">
-                        <h3>BETTERCALLRAMADAN.COM</h3>
-                        <p>Dubai's premier law firm with 25+ years of experience in legal consultation, corporate law, and legal management services.</p>
-                        <div class="project-details">
-                            <span class="detail">Content: 28,904 chars</span>
-                            <span class="detail">Security Headers: 6/6</span>
-                            <span class="detail">SSL: Active</span>
+                    <h3 class="project-title">Yalla Bazzar</h3>
+                    <p class="project-services">E-commerce Platform · Web Development · UI/UX Design</p>
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-shopping-cart"></i>
                         </div>
-                    </div>
-                    <div class="project-item">
-                        <h3>HARESHOLMES.EU.ORG</h3>
-                        <p>Personal portfolio showcasing cybersecurity expertise and web development skills with modern design and responsive architecture.</p>
-                        <div class="project-details">
-                            <span class="detail">Content: 24,170 chars</span>
-                            <span class="detail">Bootstrap Framework</span>
-                            <span class="detail">Vue.js + Node.js</span>
-                            <span class="detail">SSL: Active</span>
-                        </div>
-                    </div>
-                    <div class="project-item">
-                        <h3>THEPIRATESDXB.SOFTWARE</h3>
-                        <p>Cyberpunk-themed software house and cybersecurity firm with advanced UI/UX design and cutting-edge technology.</p>
-                        <div class="project-details">
-                            <span class="detail">Content: 23,234 chars</span>
-                            <span class="detail">Cyberpunk Theme</span>
-                            <span class="detail">Advanced UI/UX</span>
-                            <span class="detail">SSL: Active</span>
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h4>E-commerce Platform</h4>
+                                <p>Modern online marketplace</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <section id="reports" class="section">
-                <h2 class="section-title">COMPREHENSIVE REPORTS</h2>
-                <div class="reports-container">
-                    <div class="report-item">
-                        <h3>Q4 2024 Performance Report</h3>
-                        <p>Comprehensive analysis of all projects with performance metrics, security assessments, and optimization recommendations.</p>
-                        <a href="reports/Q4_2024_Performance_Report.html" class="report-link" target="_blank">View Full Report</a>
+                <div class="project-card">
+                    <div class="project-meta">
+                        <span class="project-category">Interior Design & Engineering</span>
+                        <span class="project-date">2024</span>
                     </div>
-                    <div class="report-item">
-                        <h3>Advanced Analysis Reports</h3>
-                        <p>Detailed technical analysis with performance metrics, security assessments, and technology detection for each project.</p>
-                        <a href="reports/advanced/" class="report-link" target="_blank">View Advanced Reports</a>
-                    </div>
-                    <div class="report-item">
-                        <h3>Technical Reports</h3>
-                        <p>In-depth technical specifications, architecture analysis, and performance recommendations for each project.</p>
-                        <a href="reports/technical/" class="report-link" target="_blank">View Technical Reports</a>
-                    </div>
-                    <div class="report-item">
-                        <h3>Security Audit Reports</h3>
-                        <p>Comprehensive security assessments including header analysis, SSL/TLS verification, and security recommendations.</p>
-                        <a href="reports/security/" class="report-link" target="_blank">View Security Audits</a>
-                    </div>
-                    <div class="report-item">
-                        <h3>Real-Time Analysis Report</h3>
-                        <p>Live analysis results with current performance metrics and security status for all projects.</p>
-                        <a href="reports/analysis_report.html" class="report-link" target="_blank">View Analysis</a>
-                    </div>
-                    <div class="report-item">
-                        <h3>Comprehensive Summary</h3>
-                        <p>Executive summary with overall findings, recommendations, and project status overview.</p>
-                        <a href="reports/comprehensive_summary.txt" class="report-link" target="_blank">View Summary</a>
+                    <h3 class="project-title">Amal Al Khaleej</h3>
+                    <p class="project-services">Web Design & Development</p>
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h4>Interior Design Firm</h4>
+                                <p>Professional design showcase</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
 
-            <section id="metrics" class="section">
-                <h2 class="section-title">LIVE METRICS</h2>
-                <div class="metrics-grid">
-                    <div class="metric-card">
-                        <h3>OVERALL PERFORMANCE</h3>
-                        <div class="metric-value-large">84.25/100</div>
-                        <p>Average performance score across all accessible projects</p>
+                <div class="project-card">
+                    <div class="project-meta">
+                        <span class="project-category">Server Infrastructure</span>
+                        <span class="project-date">2024</span>
                     </div>
-                    <div class="metric-card">
-                        <h3>ACCESSIBILITY</h3>
-                        <div class="metric-value-large">88.75/100</div>
-                        <p>Average accessibility score across all projects</p>
-                    </div>
-                    <div class="metric-card">
-                        <h3>SEO OPTIMIZATION</h3>
-                        <div class="metric-value-large">84.5/100</div>
-                        <p>Average SEO score across all projects</p>
-                    </div>
-                    <div class="metric-card">
-                        <h3>BEST PRACTICES</h3>
-                        <div class="metric-value-large">86.5/100</div>
-                        <p>Average best practices score across all projects</p>
+                    <h3 class="project-title">Home Server Lab</h3>
+                    <p class="project-services">Server Building & Configuration</p>
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h4>Custom Server Setup</h4>
+                                <p>Advanced infrastructure</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section id="contact" class="section">
-                <h2 class="section-title">TECHNICAL CONTACT</h2>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="contact-label">Domain:</span>
-                        <span class="contact-value">ziadhares.tech</span>
+            <div class="projects-footer">
+                <a href="#projects" class="btn btn-outline">View all projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="services-container">
+            <div class="section-header">
+                <span class="section-number">{02}</span>
+                <h2 class="section-title">Services & Skills</h2>
+                <h3 class="section-subtitle">What We Build With</h3>
+                <p class="section-description">
+                    For modern websites and custom solutions, we use cutting-edge tools and frameworks — always tailored to fit your business and performance goals.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4 class="service-name">Web Development</h4>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-label">Analysis Engine:</span>
-                        <span class="contact-value">Advanced Bash Scripts</span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-label">Report Generation:</span>
-                        <span class="contact-value">Real-time</span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-label">Last Updated:</span>
-                        <span class="contact-value" id="last-updated">Loading...</span>
+                    <p class="service-description">Modern, responsive websites and web applications.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Frontend Development</span>
+                        <span class="feature-tag">Backend Development</span>
+                        <span class="feature-tag">Responsive Design</span>
                     </div>
                 </div>
-            </section>
-        </main>
 
-        <footer class="footer">
-            <p>&copy; 2024 Ziad Hares Tech. Technical Portfolio. All analysis performed automatically.</p>
-        </footer>
-    </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h4 class="service-name">Server Management</h4>
+                    </div>
+                    <p class="service-description">Custom server builds and infrastructure management.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Server Building</span>
+                        <span class="feature-tag">Linux Administration</span>
+                        <span class="feature-tag">Docker</span>
+                    </div>
+                </div>
 
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h4 class="service-name">Network Administration</h4>
+                    </div>
+                    <p class="service-description">Network setup, configuration, and administration services.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Network Setup</span>
+                        <span class="feature-tag">Configuration</span>
+                        <span class="feature-tag">Maintenance</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4 class="service-name">PC & Laptop Repair</h4>
+                    </div>
+                    <p class="service-description">Professional computer repair and maintenance services.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Hardware Repair</span>
+                        <span class="feature-tag">Software Issues</span>
+                        <span class="feature-tag">Virus Removal</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h4 class="service-name">Computer Supply</h4>
+                    </div>
+                    <p class="service-description">Quality computers and devices at competitive prices.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Laptops</span>
+                        <span class="feature-tag">Desktops</span>
+                        <span class="feature-tag">Components</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4 class="service-name">Technical Support</h4>
+                    </div>
+                    <p class="service-description">Ongoing technical support and consultation services.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Remote Support</span>
+                        <span class="feature-tag">Consultation</span>
+                        <span class="feature-tag">Training</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-list">
+                <ul class="services-menu">
+                    <li>Custom Websites</li>
+                    <li>Server Building</li>
+                    <li>Hosting Solutions</li>
+                    <li>Network Setup</li>
+                    <li>PC & Laptop Repair</li>
+                    <li>Computer Supply</li>
+                    <li>Technical Support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="process-container">
+            <div class="section-header">
+                <span class="section-number">{03}</span>
+                <h2 class="section-title">Our Process</h2>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-header">
+                        <div class="step-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="step-title">Discovery</h3>
+                        <span class="step-number">/01</span>
+                    </div>
+                    <h4 class="step-subtitle">We'll align on your project goals and vision.</h4>
+                    <ul class="step-details">
+                        <li><strong>Project Assessment:</strong> Understand your requirements and objectives.</li>
+                        <li><strong>Technical Analysis:</strong> Review your needs and technical requirements.</li>
+                        <li><strong>Project Scope:</strong> Set clear deliverables, timelines, and expectations.</li>
+                    </ul>
+                    <span class="step-duration">1-3 days</span>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-header">
+                        <div class="step-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="step-title">Design</h3>
+                        <span class="step-number">/02</span>
+                    </div>
+                    <h4 class="step-subtitle">We turn ideas into beautiful, functional designs.</h4>
+                    <ul class="step-details">
+                        <li><strong>System Architecture:</strong> Design robust system architecture.</li>
+                        <li><strong>Visual Direction:</strong> Establish fonts, colors, and overall style.</li>
+                        <li><strong>Interactive Prototypes:</strong> Build functional interactive mockups.</li>
+                        <li><strong>Final Design:</strong> Lock in the design before development.</li>
+                    </ul>
+                    <span class="step-duration">5-7 days</span>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-header">
+                        <div class="step-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="step-title">Build</h3>
+                        <span class="step-number">/03</span>
+                    </div>
+                    <h4 class="step-subtitle">We bring the design to life — responsive, fast, and reliable.</h4>
+                    <ul class="step-details">
+                        <li><strong>Development:</strong> Build with modern best practices.</li>
+                        <li><strong>Content Integration:</strong> Add your content and functionality.</li>
+                        <li><strong>Testing:</strong> Comprehensive testing and performance optimization.</li>
+                    </ul>
+                    <span class="step-duration">4-6 days</span>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-header">
+                        <div class="step-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="step-title">Launch</h3>
+                        <span class="step-number">/04</span>
+                    </div>
+                    <h4 class="step-subtitle">We go live with reliable performance.</h4>
+                    <ul class="step-details">
+                        <li><strong>Final Review:</strong> Final testing and quality assurance.</li>
+                        <li><strong>Final Revisions:</strong> Apply any last updates and optimizations.</li>
+                        <li><strong>Launch:</strong> Deploy with reliable hosting and monitoring.</li>
+                    </ul>
+                    <span class="step-duration">1-2 days</span>
+                </div>
+            </div>
+
+            <div class="process-stats">
+                <div class="stat-highlight">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">Quality Focus</span>
+                </div>
+                <div class="stat-highlight">
+                    <span class="stat-value">3+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-highlight">
+                    <span class="stat-value">15+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="faq-container">
+            <div class="section-header">
+                <span class="section-number">{04}</span>
+                <h2 class="section-title">Common Questions</h2>
+                <h3 class="section-subtitle">Answers, Before You Even Ask</h3>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">01/</span>
+                        <h4 class="faq-title">How do you ensure quality in your projects?</h4>
+                    </div>
+                    <p class="faq-answer">
+                        Quality is our top priority. We implement industry-standard development practices, conduct thorough testing, use modern coding standards, and follow best practices for all projects.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">02/</span>
+                        <h4 class="faq-title">How long does a project usually take?</h4>
+                    </div>
+                    <p class="faq-answer">
+                        Most websites take 2–3 weeks. Larger platforms or custom builds with advanced features might take longer, but we'll always give you a clear timeline at the start.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">03/</span>
+                        <h4 class="faq-title">What technical skills do you have?</h4>
+                    </div>
+                    <p class="faq-answer">
+                        I'm a third-year computer science student at UOWD with hands-on experience in web development, server management, and network administration. I stay updated with the latest technologies and best practices.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">04/</span>
+                        <h4 class="faq-title">Do you provide ongoing technical support?</h4>
+                    </div>
+                    <p class="faq-answer">
+                        Yes, we offer ongoing technical support, regular updates, maintenance services, and 24/7 support for critical systems.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">05/</span>
+                        <h4 class="faq-title">What if I need updates after launch?</h4>
+                    </div>
+                    <p class="faq-answer">
+                        That's exactly why we work with a quality-first approach. You'll have ongoing technical support, regular updates, and we're here for any technical concerns — whether it's days or months later.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">06/</span>
+                        <h4 class="faq-title">Do you offer technical training for my team?</h4>
+                    </div>
+                    <p class="faq-answer">
+                        Absolutely. We provide technical training, development workshops, and ongoing education to help your team maintain best practices and use the systems effectively.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="section-header">
+                <span class="section-number">{05}</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <h3 class="section-subtitle">Easy to reach. Ready to build your digital presence.</h3>
+            </div>
+
+            <div class="contact-social">
+                <a href="https://wa.me/971561200583" target="_blank" class="social-link whatsapp-link">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://www.linkedin.com/in/ziyadhares" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/haresholmes" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://discord.com/users/482146045405691934" target="_blank" class="social-link">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+                <a href="mailto:ziad@haresholmes.eu.org" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+            </div>
+
+            <div class="contact-cta">
+                <a href="#contact" class="btn btn-primary">Start your project</a>
+            </div>
+
+                        <!-- 3D Terminal Contact Form -->
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="terminal-btn terminal-btn-close"></span>
+                        <span class="terminal-btn terminal-btn-minimize"></span>
+                        <span class="terminal-btn terminal-btn-maximize"></span>
+                    </div>
+                    <div class="terminal-title">
+                        <i class="fas fa-terminal"></i>
+                        <span>contact-form@ziad-hares:~$</span>
+                    </div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-content">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command">./init_contact.sh</span>
+                        </div>
+                        <div class="terminal-output">
+                            <div class="terminal-text">Initializing contact form...</div>
+                            <div class="terminal-text">Loading form fields...</div>
+                            <div class="terminal-text success">✓ Form ready for input</div>
+                        </div>
+                        
+                        <form class="terminal-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                            <!-- Web3Forms Access Key -->
+                            <input type="hidden" name="access_key" value="89e6cb5e-10d9-4c37-b2ae-b0fb263f902a">
+                            <input type="hidden" name="subject" value="New Contact Form Submission - Ziad Hares Website">
+                            <input type="hidden" name="from_name" value="Ziad Hares Website">
+                            <input type="hidden" name="replyto" value="ziad@haresholmes.eu.org">
+                            <input type="checkbox" name="botcheck" style="display: none;">
+                            
+                            <div class="terminal-input-group">
+                                <div class="terminal-line">
+                                    <span class="terminal-prompt">$</span>
+                                    <span class="terminal-command">name</span>
+                                </div>
+                                <input type="text" id="name" name="name" class="terminal-input" required placeholder="Enter your name...">
+                            </div>
+                            
+                            <div class="terminal-input-group">
+                                <div class="terminal-line">
+                                    <span class="terminal-prompt">$</span>
+                                    <span class="terminal-command">email</span>
+                                </div>
+                                <input type="email" id="email" name="email" class="terminal-input" required placeholder="Enter your email...">
+                            </div>
+                            
+                            <div class="terminal-input-group">
+                                <div class="terminal-line">
+                                    <span class="terminal-prompt">$</span>
+                                    <span class="terminal-command">subject</span>
+                                </div>
+                                <input type="text" id="subject" name="subject" class="terminal-input" required placeholder="Enter subject...">
+                            </div>
+                            
+                            <div class="terminal-input-group">
+                                <div class="terminal-line">
+                                    <span class="terminal-prompt">$</span>
+                                    <span class="terminal-command">message</span>
+                                </div>
+                                <textarea id="message" name="message" class="terminal-textarea" rows="4" required placeholder="Enter your message..."></textarea>
+                            </div>
+                            
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span>
+                                <button type="submit" class="terminal-submit">
+                                    <span class="terminal-command">./send_message.sh</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <div class="terminal-footer">
+                            <div class="terminal-text">Type 'help' for more commands or 'exit' to close</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-fallback">
+                <p>Or email me directly at: <a href="mailto:ziad@haresholmes.eu.org" class="email-link">ziad@haresholmes.eu.org</a></p>
+            </div>
+
+            <div class="contact-stats">
+                <div class="stat-item">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">years of experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">quality focus</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">projects completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">UOWD</span>
+                    <span class="stat-label">computer science student</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">6+</span>
+                    <span class="stat-label">services offered</span>
+                </div>
+            </div>
+
+            <div class="contact-status">
+                <span class="status-text">Now accepting new projects</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h2 class="footer-title">Let's build the next great thing, together.</h2>
+                    <h3 class="footer-subtitle">It starts with a message.</h3>
+                    <div class="footer-contact">
+                        <a href="mailto:ziad@haresholmes.eu.org" class="footer-email">ziad@haresholmes.eu.org</a>
+                    </div>
+                    <p class="footer-description">
+                        Got an idea? Let's turn it into something amazing that people will remember — whether it's a brand, a website, or a platform with reliable performance.
+                    </p>
+                    <a href="#contact" class="btn btn-primary">Start your project</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 Ziad Hares</p>
+                <p class="footer-registration">Web Developer & Computer Specialist</p>
+                <a href="https://haresholmes.eu.org" class="footer-link">Visit Portfolio</a>
+            </div>
+        </div>
+    </footer>
+
+    </main>
+
+                <!-- Floating WhatsApp Button -->
+            <a href="https://wa.me/971561200583" target="_blank" class="floating-whatsapp" id="floatingWhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+            </a>
+
+            <!-- Back to top button -->
+            <button class="back-to-top" id="backToTop">
+                <span>Back to top</span>
+            </button>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html> 
